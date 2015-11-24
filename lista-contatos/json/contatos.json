@@ -1,0 +1,108 @@
+﻿[
+    {
+        "nome": "PEDRO",
+        "telefone": "15 3236-9896",
+        "observacao": "CASA"
+    },
+    {
+        "nome": "THELMA",
+        "telefone": "11 9895-3235",
+        "observacao": "AMIGA"
+    },
+    {
+        "nome": "JANE",
+        "telefone": "19 9865-6398",
+        "observacao": "PROFESSORA"
+    },
+    {
+        "nome": "HENRIQUE",
+        "telefone": "14 6963-9896",
+        "observacao": "PROFESSOR"
+    },
+    {
+        "nome": "AMARIOLA",
+        "telefone": "21 1265-9863",
+        "observacao": "CONSULTORA VIAGENS"
+    },
+    {
+        "nome": "GUERRERO",
+        "telefone": "11 9865-9632",
+        "observacao": "AMIGO"
+    },
+    {
+        "nome": "GREGORIO",
+        "telefone": "54 9845-7825",
+        "observacao": "AMIGO"
+    },
+    {
+        "nome": "GABRIEL",
+        "telefone": "12 3654-7853",
+        "observacao": "CORRETOR DE SEGUROS"
+    },
+    {
+        "nome": "FATEC SÃO ROQUE",
+        "telefone": "11 2456-9874",
+        "observacao": "SECRETÁRIA FACULDADE"
+    },
+    {
+        "nome": "PAI",
+        "telefone": "14 3236-8745",
+        "observacao": "NUM CASA DO PAI "
+    },
+    {
+        "nome": "MÃE",
+        "telefone": "15 9865-1234",
+        "observacao": "CELULAR MÃE"
+    },
+    {
+        "nome": "CHEFE",
+        "telefone": "32 4568-9689",
+        "observacao": "JQUANT"
+    },
+    {
+        "nome": "PREFEITURA SR",
+        "telefone": "11 9635-4563",
+        "observacao": "SECRETÁRIA DA SAÚDE"
+    },
+    {
+        "nome": "CASA",
+        "telefone": "15 3236-6290",
+        "observacao": "NUMERO DE CASA"
+    },
+    {
+        "nome": "VAGNER",
+        "telefone": "11 8996-3456",
+        "observacao": "MECÂNICO"
+    },
+    {
+        "nome": "SORRIR MELHOR",
+        "telefone": "12 9546-9789",
+        "observacao": "DENTISTA - PAULO "
+    },
+    {
+        "nome": "BIRDA GÁS",
+        "telefone": "15 9745-9624",
+        "observacao": "ENTREGA DE GÁS ATÉ 21HS"
+    },
+    {
+        "nome": "DIRCÊ",
+        "telefone": "12 3231-9578",
+        "observacao": "VIZINHA"
+    },
+    {
+        "nome": "SALIM",
+        "telefone": "11 6985-9715",
+        "observacao": "AMIGO, RESTAURANTE"
+    },
+    {
+        "nome": "RICARDO",
+        "telefone": "19 2568-9874",
+        "observacao": "$19"
+    },
+    {
+        "nome": "BERENICE",
+        "telefone": "15 9863-2123",
+        "observacao": "DIARISTA"
+    }
+]
+

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* 
+Projeto Integrador Portal São Roque Tem
+Autores: Gregorio de Almeida Queiroz, Thelma Kodama da Silva
+Data: novembro/2014
+Versão: 0.1
+Recursos utilizados: HTML, CSS, Photoshop, Navegadores: Google Chrome e Mozilla Firefox.
+*/
+html {
+    background-color: white;   
+}
+
+body{
+    padding: 0px;
+    width: 927px;
+    margin: 0px auto 0px auto;
+    font-family: "Arial, Times New Roman,serif";
+    font-size: 1.1em;
+    text-align: justify;
+}
+.conteudo{
+    width:927px; 
+}
+.logo{
+    float: left;
+}
+.titulotabela{
+    width: 100%;
+    position: relative;
+}
+.logo{
+    width: 30%; 
+    float: left;
+}
+.titulo{
+    width: 70%;
+    float: right;
+    margin: -110px 120px 0px 0px;
+}
+    
+h1 {
+    text-align: left;
+    color: green;
+    margin: 2px 0px 0px 2px;
+    padding: 4px;
+    background-color: lightgray;
+    text-transform: uppercase;
+    width: 910px;
+}
+section{
+    clear: both;
+}
+footer {
+    clear:both; 
+    font-size: 0.7em;
+    font-family: "Arial, Times New Roman, Serif";
+    text-transform: uppercase;
+    background-color: #8f5444;
+    color: #d7af14;
+    font-weight: bolder;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    padding: 6px;
+    width:850px;
+}
+table {
+    width: 850px;
+    margin: 2px;
+    padding: 4px;
+}
+
+th{
+    background-color: white;
+    border-style: solid;
+    padding: 10px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+td{
+    border-style: solid;
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #fff;
+    color:#057b49;
+	font-size: 20px;
+}
+.initial{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #d7af14;
+    border: none;
+}
+.apagaborda{
+    border: none;   
+}

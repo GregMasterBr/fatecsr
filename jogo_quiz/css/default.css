@@ -1,0 +1,157 @@
+
+@charset "UTF-8";
+
+/* 
+	Nome: CSS Quiz
+	Data: 20/02/2015
+	Descrição: Versão inicial. 
+	Versão: 0.1
+	Autor: GregMaster
+	Autor URI: http://www.gregmaster.com.br 
+*/
+
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+	outline: none;
+}
+a:hover { text-decoration:none;	outline: none;}
+body{
+	 background-image: url("../img/bkg_peao.jpg");	
+	 background-image: url("../img/bkg_torre.jpg");
+
+	 background-repeat: no-repeat; 
+	 background-size:100%;
+    background-color: #B68747;
+    background-color: #333;	
+    background-color: #000;
+
+}
+.marca_greg {
+	font-family: 'ChunkFive Regular', Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	text-shadow: 0 3px 3px #555;
+	color: #292929;
+	color: #fff;
+	outline: none;
+	text-decoration: none !important;
+	text-shadow: 0 5px 5px #fff;
+	font-weight: bold;
+	
+}
+.marca_greg img{
+	margin-left:10px;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	outline: none;
+	margin-top: 1px;
+}
+.modal-title{
+	color:#000;
+}
+.control-label{
+	color:#000;
+	text-align:left !important;
+}
+
+/*Modal de Introducao*/
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:205px;
+  display:none;
+  z-index:9999;
+  /*padding:20px;*/
+  background:#ccc;
+}
+#boxes #introducao {
+  /*width:375px; 
+  height:203px;*/
+}
+
+#introducao .d-header {
+  float:left;
+  /*background:url(login-header.png) no-repeat 0 0 transparent; */
+  /*background:blue;*/
+  width:100%; 
+  height:50px;
+}
+
+/*#introducao .d-header input {
+  position:relative;
+  top:60px;
+  left:100px;
+  border:3px solid #cccccc;
+  height:22px;
+  width:200px;
+  font-size:15px;
+  padding:5px;
+  margin-top:4px;
+}*/
+#introducao  .escolher_nivel{
+  float:left;
+  /*background:gray;*/
+  width:100%; 
+  height:100px;
+  text-align:left;
+}
+#introducao  .escolher_nivel label{
+	
+	padding: 0;
+	padding-left:20px;
+	width:30%;
+	margin-bottom: 20px;
+	font-size: 21px;
+	line-height: inherit;
+	color: #333;
+	border: 0;
+}
+#introducao  .escolher_nivel input,select{
+	color:#000;
+}
+
+#introducao .d-footer {
+  float:left;
+  /*background:black;*/
+  width:100%; 
+  height:50px;
+}
+.close{display:block; text-align:right;}
+/*fim da modal de introducao*/
+
+
+/*Questionario*/
+.questionario{
+	background:#fff;
+}
+.pergunta{
+	font-weight:bold;
+	color:red;
+	margin:5px;
+}
+.questao input{
+	margin:5px;
+}
+.encerrar{
+	font-size:12pt;
+	border:1px solid #f8f8f8;
+	background-color:#ffffff;
+	color:#696969;
+	font-weight:bold;
+}

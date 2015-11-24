@@ -1,0 +1,454 @@
+@charset UTF-8;
+/* 
+	Nome: Estilo para o site de do Japão 
+	Data: 06 Mai 2014
+	Descrição:  Estilo para o site de do Japão - Itens exclusivos das paginas internas (paginas)
+	Versão: 0.1
+	Autores: Gregorio Queiroz e Thelma Kodama
+	Autor URI:http://gregorioalmeidaqueiroz.wordpress.com/
+	Autor URI:http://srtakodama.wordpress.com/
+*/
+
+*{
+  margin: 0px; padding:0px;
+}
+
+a, a:hover{
+	text-decoration: none;
+	font-weight: bold;
+}
+@font-face {font-family:"Japonesa";src:url("fonts/japonesa/japonesa.eot?") format("eot"),
+								   url("fonts/japonesa/japonesa.woff") format("woff"),
+								   url("fonts/japonesa/japonesa.ttf") format("truetype"),
+								   url("fonts/japonesa/japonesa.svg#japonesa") format("svg");
+								   /*font-weight:bold;*/
+								   font-weight:normal;
+								   font-style:normal;
+								   
+}
+/*Explicando a Estrutura */
+/*
+	Nossa Estrutura Segue este Nível
+	HTML -> BODY - > PAGINA( -> CONTROLE{ FundoConteudo(IMAGEM), Conteúdo,Men} -RODAPE)
+	
+	Nós combinamos de nos organizar nossa pagina atraves desta classe chamada PAGINA.
+	
+	
+*/
+
+.pagina{
+    /*width: 900px;*/
+	/*para facilitar nosso controle vou definir o width em %, blz, facilita porque vamos utilizar a regiao inteira do browser, e desta forma 
+	conseguimos que nao apareça aquele espaço restante*/
+	width: 100%;
+	position:absolute;/*Como eu ocupo 100% da minha Largura, eu dou um Posicionamento ABSOLUTE, para manter nosso esqueleto no mesmo local*/
+	overflow-x: hidden;/*Isto aqui serve para remover a barra de rolagem da pagina, o X é horizontal o Y é vertical*/	
+	/*background:purple;*/
+}
+.controle{
+	/*Este cara vai controlar nossa area que fica o conteudo e o menu.*/
+	width: 100%;
+	float:left;/*Dou um  Float Left, para quebrar o elemento abaixo dele, no caso é o rodape, abaixo dele. em nossa estrutura*/
+	/*background:pink;*/
+	height:596px;/*Estimei a altuea com base na sua imagem de fundo*/
+}
+.fundo_conteudo{
+	background-image: url(../img/cultura2.jpg);
+    background-repeat: no-repeat; 
+	height:600px;
+    /*background-color: yellow;*/
+	/*float:left; /*sempre que vc for mexer com BOX defina o float dele para left e se area em que ele for apresentado dividir com um outtro box-model
+	 vc precisará definir o WIDTH de ambos por exemplo box 1 eu quero que tenha 500px eo segundo 200px, ambos vão respeitar a regra do float e ficarão
+	 lado a lado se a REGIAO que ambrange amnbos tiver espaço para eles, ou seja neste caso 700px*/
+	 /*Uma outra dica, qndo estamos trabalhando possicionamento, defina um backgropund com cor, fica mais fácil para gerenciar, a posição desejada
+	depois de acertado eh so comentar. 
+	 */
+	z-index:1;/*O Zindex é uma propriedade muito interessante, ela serve para falar quem está acima de quem, caso tenha elemento concorrendo a mesma região
+	no layout, como é o nosso caso, onde se vc observar aqui é onde fica aquela nossa imagem de fundo, e acima dela vamos colocar nosso conteudo. 
+	O valor de Z-index começa em 1, é dado naturalmente conforme vc insere os elemntos na pagina, mas qndo vc precisa que algo fique sobre posto a outro, defina 
+	o Z-index para  o maximo, que no caso é 999, mtas pessoas usam valores superior a 999, mas o maximo é até 999, conforme manual.
+	*/
+	position:absolute;
+	opacity:0.9;/*Aqui eu trabalho a Opacidade, para deixar a imagem mais clara., Qnto masi proxima do 1, mas visivel ela fica, 1 é o DEFAULT*/
+	width: 80%;
+}
+.conteudo{
+	/*Este cara é onde vamos colcoar nosssos TEXTOS, observa lá no layout eu tenho dentro dele um <H1>, que esta visivel aos usuarios*/
+	height:596px;
+	min-height:596px;
+	background-color: red;
+    background-color: black;	
+	/*float:left; /*sempre que vc for mexer com BOX defina o float dele para left e se area em que ele for apresentado dividir com um outtro box-model
+	 vc precisará definir o WIDTH de ambos por exemplo box 1 eu quero que tenha 500px eo segundo 200px, ambos vão respeitar a regra do float e ficarão
+	 lado a lado se a REGIAO que ambrange amnbos tiver espaço para eles, ou seja neste caso 700px*/
+	 /*Uma OBS é como eu utilizei um elemento que amarra fundo_conteudo, conteudo, e menu, eu nao precisei trabalhar no FLOAT, pois eu utilizei o POSITION*/
+	 /*Uma outra dica, qndo estamos trabalhando possicionamento, defina um backgropund com cor, fica mais fácil para gerenciar, a posição desejada
+	depois de acertado eh so comentar. 
+	 */
+	/*float:left;*/
+	opacity:0.8;/*Aqui eu trabalho a Opacidade,*/
+	z-index:2;/*Repare que o Z -INDEX dele é MAIOR que o da fundo_conteudo, por isso da a sensação de estar acima do mesmo, repare que se vc inverte os valores
+		ele deixara de ser visivel. Repare que muda a cor, pois o PRETO some de questão, eé ele que dá a Sombra.
+	*/
+	position:absolute;
+	width: 80%;
+	display:block;
+}
+.conteudo .area_conteudo {
+	background:transparent;
+	background:white;
+	opacity:0.7;
+	width:100%;
+	height:590px;
+
+}
+.scroll{
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.conteudo .area_conteudo .titulo{
+	color:black;
+	font-weight:bold;
+	font-size:20pt;
+	text-align:center;
+	text-shadow: 1px 1px 1px red;
+}
+.conteudo .area_conteudo .subtitulo{
+	color:white;
+	font-weight:bold;
+	font-size:20pt;
+	text-align:left;
+	margin-left:1px;
+	padding-left:15px;
+	margin-top:8px;
+	background:black;
+	float:left;
+	width:100%;
+	text-shadow: 1px 1px 1px red;
+}
+.conteudo .area_conteudo .mais_info{
+	color:white;
+	font-weight:bold;
+	font-size:12pt;
+	text-align:left;
+	margin-left:1px;
+	padding-left:15px;
+	margin-bottom:2px;
+	margin-top:8px;
+	background:black;
+	float:left;
+	width:100%;
+	text-shadow: 1px 1px 1px red;
+	text-decoration:uppercase;
+}
+
+
+
+.conteudo .area_conteudo .mais_info a{
+	color:white;
+	text-shadow: 1px 1px 1px red;
+}
+.conteudo .area_conteudo .texto{
+	color:black;
+	text-align:justify;
+	font-size:14pt;
+	font-weight:bold;
+	text-indent: 2em;
+	text-shadow: 1px 1px 1px #fff;
+	margin:5px 12px 0 12px;
+	float:left;
+	/*background:yellow;*/
+}
+/* classe do texto (texto img_dir)*/
+.conteudo .area_conteudo .img_dir{
+	width:65%;
+	/*background:blue;*/
+}
+.conteudo .area_conteudo .area_img_dir{
+	float:left;
+	width:32%;
+	/*background:black;*/
+}
+.conteudo .area_conteudo .area_img_dir img{
+	border-radius:5px;
+}
+.conteudo .area_conteudo .area_img_dir .tit_img{
+	font-size:14pt;
+	margin-bottom:3px;
+	color:black;
+	text-align:center;
+}
+
+.conteudo .area_conteudo .area_img{
+	float:left;
+	text-align:center;
+	/*background:purple;*/
+	width:100%;
+
+}
+.conteudo .area_conteudo .area_img img{
+	/*float:left;*/
+}
+.conteudo .area_conteudo .area_img .fonte_pesquisa, .conteudo .area_conteudo .area_img .fonte_pesquisa a{
+	color:red;
+	font-weight:bold;
+	
+}
+.area_conteudo .lista_cultura{
+	/*background:red;*/
+	float:left;
+	font-size:12pt;
+	margin-left:45px;
+	text-align:justify;
+}
+.area_conteudo .lista_cultura li{
+	margin-top:2px;
+}
+
+/*repaare aquilo que mostrei de atribuir mais de uma class a um elemento, em todos os lugares em que quisermos mostrar a font japonessa, basta
+acrescentar dentro do CLASS="classesua font_japones"
+*/
+.font_japones{
+	font-family: Japonesa;
+}
+/*aqui repare -  Eu so mexo nos elementos <A> que possuem font_japonesa, todos outros elementos que nao enquadrar nestar regra, não terão o efeito definido*/
+a.font_japones{
+	font-size:20pt;
+}
+
+/*TRATAMENTO PAGINA CULIARIA*/
+.culinaria{
+	width:100%;
+	float:left;
+	/*background:pink;*/
+}
+.culinaria .bloco{
+	width:100%;
+	float:left;
+	/*background:pink;*/
+	margin-top:2px;
+}
+.culinaria .prato_esq{
+	width:25%;
+	float:left;
+	/*background:blue;*/
+	margin-left:5px;
+}
+.culinaria .prato_esq .tit_img{
+	font-size:14pt;
+	margin-bottom:3px;
+	color:black;
+	text-align:center;
+}
+.culinaria .prato_dir .tit_img{
+	font-size:14pt;
+	margin-bottom:3px;
+	color:black;
+	text-align:left;
+}
+.culinaria .prato_esq img, .culinaria .prato_dir img{
+	border-radius:5px;
+}
+.culinaria .texto.dir{
+	width:72%;
+	float:left;
+	font-size:12pt;
+	/*background:red;*/
+	
+}
+
+.culinaria .texto.esq{
+	width:72%;
+	margin-left:3px;
+	float:left ;
+	font-size:12pt;
+	/*background:red;*/
+}
+
+.culinaria .prato_dir{
+	width:25%;
+	float:left;
+	/*background:blue;*/
+	margin-left:5px;
+}
+
+/*CONTATO*/
+.kelvin{
+	color:red !important;
+	text-shadow: 1px 1px 1px #fff !important;
+}
+.contato{
+	float:left;
+	background:black;
+	width:100%;
+}
+.contato .img_perfil{
+	text-align:center;
+}
+.logo_tks{
+	text-align:center;
+	width:100%;
+	background:black;
+	margin-top:10px;
+	float:left;
+}
+
+/*diario*/
+#diario {
+	width:98%;
+	margin:0 auto;
+	/*background:yellow;*/
+	text-align:justify;
+	font-size:14px;
+}
+#diario .agenda {
+	margin-bottom:30px;
+	margin-left:15px;
+	}
+#diario span {
+	display:block;
+	cursor:pointer;
+	color:black;
+	font-weight:bold;
+	font-size:16pt;
+	text-align:center;
+	margin-left:1px;
+	float:left;
+	width:100%;
+	margin-top:10px;
+	text-shadow: 2px 2px 2px red;
+}
+
+.diario .bloco{
+	width:100%;
+	float:left;
+	/*background:pink;*/
+	margin-top:2px;
+}
+.diario  .tit_agenda{
+	text-align:center;
+	color:red;
+	margin-bottom:8px;
+}
+.diario .cont_esq{
+	width:36%;
+	float:left;
+	/*background:blue;*/
+	padding-left:1px;
+}
+
+.diario .cont_esq img, .diario .cont_dir img{
+	border-radius:5px;
+}
+.diario .texto.dir{
+	width:61%;
+	float:left;
+	font-size:12pt;
+	/*background:red;*/
+	
+}
+
+.diario .texto.esq{
+	width:61%;
+	/*margin-left:3px;*/
+	float:left ;
+	font-size:12pt;
+	/*background:red;*/
+}
+
+.diario .cont_dir{
+	width:36%;
+	float:left;
+	/*background:blue;*/
+	margin-left:5px;
+}
+
+
+
+
+
+
+.menu{
+	z-index:99;
+    /*width: 200px;*/
+	/*Repare a ideia aqui, NOSSA AREA TOTAL é de 100% eu usei 80% em cima e o restante (20%) pro menu*/
+	width: 20%;
+	position:absolute;
+	left:79.8%;
+	/*background:blue;*/
+   
+}
+.menu ul{
+	list-style:none;
+	/*border:px solid yellow;*/
+	
+	
+}
+.menu ul .itens{
+	z-index:99;
+	width:100%;
+	background:red;
+	height:117.2px;
+	border:1px solid #000;
+	border:1px solid red;
+	opacity:0.90;/*Aqui eu trabalho a Opacidade,*/
+	-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+
+}
+.menu ul .itens:hover{
+	opacity:1;/*Aqui qndo o usuario passar o mouse eu dou a opacidade normal, que é 1*/
+	/*filter: none; /* IE6-9 */
+	-webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+	color:red;
+}
+
+.menu ul .item1{
+		background: url('../img/cultura.jpg') repeat scroll 0%;
+}
+.menu ul .item2{
+		background: url('../img/culinaria.jpg') repeat scroll 0%;
+}
+.menu ul  .item3{
+		background: url('../img/diario.jpg') repeat scroll 0%;
+}
+.menu ul .item4{
+		background: url('../img/historia.jpg') repeat scroll 0%;
+}
+.menu ul .item5{
+		background: url('../img/contato.jpg') repeat scroll 0%;
+}
+
+.rodape{
+	/*Repare agora, eu vou dar um float left, mas ele nao ficara ao lado do menu, pelo fato que a area ja foi preenchida (100%), ous eja unico lugar que ele cabe
+	é embaixo de ambos, aie pra ficar bonito eu defino o width dele de 100%*/
+	/*background:black;*/
+	background:red;
+	-webkit-box-shadow: 3px 1px 1px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 1px 1px 1px rgba(0,0,0,0.75);
+    box-shadow: 3px 1px 1px 1px rgba(0,0,0,0.75);
+	height: 47px;   
+    float: left; 
+	width: 100%;
+	
+}
+.rodape section{
+	float:left;
+	width:4.5%;
+	/*background:purple;*/
+}
+.rodape img{
+	float:left;
+		
+}
+.rodape p{
+	float:left;
+	/*background:yellow;*/
+	text-align:center;
+	margin:0 auto;
+	/*margin-left:500px;*/
+	font-weight:bold;
+	color:#fff;
+	width:91%;
+	
+}

@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* 
+	Nome: Estilo para o Portifolio
+	Data: 24 Fev 2015
+	Descrição: Estilo para o portifolio GregMaster 
+	Versão: 0.1
+	Autores: Gregorio Queiroz
+	Autor URI:http://www.gregmaster.com.br
+*/
+
+/*Corpo do documento*/
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color:transparent;
+}
+a, a:hover{
+	text-decoration: none;
+	/*color:blue;
+	font-weight:bold;*/
+}
+.marca{
+	font-family: 'ChunkFive Regular', Arial, Helvetica, sans-serif;
+	font-size: 2.5em;
+	text-shadow: 0 3px 3px #555;
+	color: #292929;
+	outline: none;
+	text-decoration: none;
+	text-shadow: 0 5px 5px #fff;
+}
+
+.info_detalhes{
+	text-indent:2em;
+	font-size: 0.9em;
+	text-align:justify;		
+}
+
+/*Filtros nas imagens */
+
+.perfil.filtro{ /*Drop-shadow*/
+    -webkit-filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+
+}
+
+
+.filtro:hover{ /*Drop-shadow*/
+    -webkit-filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+}
+
+.moldura {
+height: auto;
+width: auto;
+padding: 10px;
+margin: 10px auto;
+text-align: center;
+/* border: 1px solid #C0C0C0; */
+background-color: #fff;
+-moz-box-shadow: 5px 4px 10px #ccc;
+-moz-box-shadow: 5px 4px 10px #ccc;
+-webkit-box-shadow: 5px 4px 10px #ccc;
+.contato{
+	font-weight:500;
+	color:#303030;
+}
+.rodape .site-gregmaster{
+	color:black;
+	font-weight:bold;
+}
+
+
+/*Formulário de COntato*/
+/* CONTATO*/
+/*fix*/
+#Contato{
+	width: 50%;
+}
+	.form-contato{
+		/*background:pink;*/
+		width: 100%;
+	}
+	#send { 
+		margin: 15px 0 0 0;
+		/*background:blue;*/
+		width:100%;
+	}
+	#send input,#send textarea { 
+		width: 95%;	 
+		margin:0 2% 0 2%;
+		background: none repeat scroll 0 0 #FFFFFF; 
+		border: 1px solid #C9C9C9; 
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset, -5px -5px 0 0 #F5F5F6, 5px 5px 0 0 #F5F5F6, 5px 0 0 0 #F5F5F6, 0 5px 0 0 #F5F5F6, 5px -5px 0 0 #F5F5F6, -5px 5px 0 0 #F5F5F6; 
+		color: #545658; 
+		margin-bottom:5px;
+		font-size: 12px; 
+		border-radius: 2px 2px 2px 2px; 
+	}
+	.rotulo { 
+		display: block; 
+		margin-bottom: 5px; 
+		font-weight: bold; 
+		font-size: 12px; 
+	}
+	#signup-form { 
+		margin: 0 auto; 
+	}
+

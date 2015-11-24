@@ -1,0 +1,26 @@
+@charset utf-8;
+body {text-align: justify;}
+
+section {clear: both;}
+.shigde{font-size: 3em;}
+.shimed{font-size: 2em;}
+.shipeq{font-size: 1em;}
+.shimpeq{font-size: .8em;}
+.shiepeq{font-size: .5em;}
+
+table {text-align: center;}
+.shititulo{font-size: 6em;
+    text-align: center;}
+.shiseta{position: fixed;
+    padding:600px 0px 0px 1100px;}
+aside {float: right;}
+
+
+@media screen and (max-width: 420px) {
+    .cont-conteudo {
+       display: none;
+    }
+}
+
+
+

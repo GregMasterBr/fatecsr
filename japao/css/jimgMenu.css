@@ -1,0 +1,125 @@
+@charset UTF-8;
+/* 
+	Nome: Estilo para o site de do Japão INDEX
+	Data: 06 Mai 2014
+	Descrição:  Estilo para o site de do Japão CSS do Index
+	Versão: 0.1
+	Autores: Gregorio Queiroz e Thelma Kodama
+	Autor URI:http://gregorioalmeidaqueiroz.wordpress.com/
+	Autor URI:http://srtakodama.wordpress.com/
+*/
+@font-face {font-family:"Japonesa";src:url("fonts/japonesa/japonesa.eot?") format("eot"),
+								   url("fonts/japonesa/japonesa.woff") format("woff"),
+								   url("fonts/japonesa/japonesa.ttf") format("truetype"),
+								   url("fonts/japonesa/japonesa.svg#japonesa") format("svg");
+								   /*font-weight:bold;*/
+								   font-weight:normal;
+								   font-style:normal;}
+*{
+	margin:0 !important;
+	padding:0 !important;
+}
+a, a:hover{
+	text-decoration:none;
+
+}
+
+body {
+	margin:0;
+	padding:0;
+	color: #333;
+	font: normal 0.6em sans-serif,Arial;
+	width: 100%;
+	max-height:666px;
+	overflow: hidden;
+}
+.pagina{
+	width: 100%;
+	height:666px;
+	background:black;
+	max-height:666px;
+}
+
+.jimgMenu {
+	float:left;
+	position: relative;
+	width:100%;
+	overflow: hidden;
+	height: 666px;
+}
+
+.jimgMenu ul {
+	list-style: none;
+	margin-left: 2px;
+	padding:0px;
+	display: block;
+	height: 666px;
+	width: 2340px;
+}
+
+.jimgMenu ul li {
+	float: left;
+}
+
+.jimgMenu ul li a {
+	/*text-indent: -1000px;*/
+	background:#FFFFFF none repeat scroll 0%;
+	border-right: 4px solid black;
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	width:78px;
+	height: 666px;
+}
+.jimgMenu  .link{ 
+	min-width:100px;
+	text-align:left;
+	margin:25px 2px 2px 0px !important;
+	padding:2px!important;
+	width:100%;
+	font-weight:bold;
+	font-size:20px;
+	background:red;
+	color:#fff;
+	-webkit-transform:rotate(-90deg); 
+	-moz-transform:rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	/*-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);	*/
+	-moz-box-shadow:    1px 1px 2px 3px #ccc;
+	-webkit-box-shadow: 1px 1px 2px 3px #ccc;
+	box-shadow:         1px 1px 2px 3px #ccc;
+	opacity:0.80;
+	-moz-opacity: 0.80;
+	filter: alpha(opacity=80);
+	font-family: Japonesa;
+}
+.jimgMenu ul li.cultura a {
+	background: url('../img/p/1.jpg') repeat scroll 0%;
+}
+
+.jimgMenu ul li.culinaria a {
+	background: url('../img/p/2.jpg') repeat scroll 0%;
+}
+
+.jimgMenu ul li.diario a {
+	background: url('../img/p/3.jpg') repeat scroll 0%;
+}
+.jimgMenu ul li.historia a {
+	background: url('../img/p/4.jpg')  repeat scroll 0%;
+}
+
+.jimgMenu ul li.contato a {
+	background: url('../img/p/5.jpg') repeat scroll 0%;
+	min-width:960px;
+}
+.jimgMenu ul li.active a {
+	width:1;
+}
+.rodape{
+	float:left;
+	display:none;
+	background:black;
+	width: 100%;
+	height:70px;
+}

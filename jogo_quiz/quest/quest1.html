@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+			<meta charset="UTF-8"/>
+			
+			<link type="text/css" rel="stylesheet" href="../css/default.css" />
+			
+<script>
+
+// abre janela
+function abre(url,janela,larg,alt,scroll){
+	window.open(url,janela,"toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars="+scroll+",resizable=no,copyhistory=no,width="+larg+",height="+alt);
+}
+
+</script>		
+<script type="text/javascript">
+<!--
+function confere()
+{
+  aux='Resultado:                                \n\n';
+  //alert(document.resultado_questionario.questao9);
+  //alert(document.getElementById("questao10").value);
+  score = 0;
+  if(document.getElementById("questao1").value=="16")
+  {
+	aux= aux + '   Questão 1: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 1: resposta errada. A Resposta correta é (16). \n'
+  }
+  if(document.resultado_questionario.questao2.value=="D")
+  {
+	aux= aux + '   Questão 2: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 2: resposta errada. A Resposta correta é (D). \n'
+  }
+  if(document.resultado_questionario.questao3.value=="D")
+  {
+	aux= aux + '   Questão 3: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 3: resposta errada. A Resposta correta é (D). \n'
+  }
+  if(document.getElementById("questao4").value=="5")
+  {
+	aux= aux + '   Questão 4: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 4: resposta errada. A Resposta correta é (5). \n'
+  }
+  if(document.resultado_questionario.questao5.value=="A")
+  {
+	aux= aux + '   Questão 5: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 5: resposta errada. A Resposta correta é (A). \n'
+  }
+  if(document.resultado_questionario.questao6.value=="B")
+  {
+	aux= aux + '   Questão 6: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 6: resposta errada. A Resposta correta é (B). \n'
+  }
+  if(document.getElementById("questao7").value=="Pastor")
+  {
+	aux= aux + '   Questão 7: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 7: resposta errada. A Resposta correta é (Pastor). \n'
+  }
+   if(document.getElementById("questao8").value=="64")
+  {
+	aux= aux + '   Questão 8: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 8: resposta errada. A Resposta correta é (64). \n'
+  }
+  if(document.resultado_questionario.questao9.value=="B")
+  {
+	aux= aux + '   Questão 9: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 9: resposta errada. A Resposta correta é (B). \n'
+  }
+  //document.getElementByName("nivel").value;
+  if(document.getElementById("questao10").value=="Roque")
+  {
+	aux= aux + '   Questão 10: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 10: resposta errada. A Resposta correta é (Roque). \n'
+  }  
+	  alert(aux + '\n\Você acertou ' + score + ' de 10 questões!' )
+    return true;
+}
+
+// -->
+</script>
+
+	
+	</head>
+	<body class="questionario quest1">
+	<form name="resultado_questionario"> 
+		<div class="">
+			<h2>Quizz Chess - Nível Fácil</h2>
+			<hr />
+			<div class="questao">
+				<p class="pergunta">1. Quantas peças há pra cada jogador?</p>
+				<input type="text" name="questao1" id="questao1" />
+			</div>
+			<div class="questao">
+				<p class="pergunta">2. Como é a movimentação do cavalo?</p>
+				(A)<input type="radio" name="questao2" value="A">Todas as direções<br /> 
+				(B)<input type="radio" name="questao2" value="B">Na diagonal <br />
+				(C)<input type="radio" name="questao2" value="C">Na horizontal e vertical <br />
+				(D)<input type="radio" name="questao2" value="D">Em "L"<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">3. No jogo de xadrez, cada peça tem seu valor. Qual é o valor do Bispo?</p>
+				(A)<input type="radio" name="questao3" value="A">1<br /> 
+				(B)<input type="radio" name="questao3" value="B">5<br />
+				(C)<input type="radio" name="questao3" value="C">10<br />
+				(D)<input type="radio" name="questao3" value="D">3<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">4. Em que século surgiu o jogo de xadrez?</p>
+				<input type="text" name="questao4" id="questao4" />
+			</div>
+			<div class="questao">
+				<p class="pergunta">5. Qual destas alternativas apresenta uma situação de empate?</p>
+				(A)<input type="radio" name="questao5" value="A">Ficar somente os dois Reis, pretos e brancos, no jogo<br /> 
+				(B)<input type="radio" name="questao5" value="B">As duas Torres, pretas e brancas, serem capturadas<br />
+				(C)<input type="radio" name="questao5" value="C">Não haver nenhum Peão no jogo<br />
+				(D)<input type="radio" name="questao5" value="D">Não existir nenhum Bispo, preto ou branco<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">6. Qual o objetivo do jogo de xadrez?</p>
+				(A)<input type="radio" name="questao6" value="A">Capturar a Dama do adversário<br /> 
+				(B)<input type="radio" name="questao6" value="B">Deixar o Rei do adversário sem movimentos e em xeque<br />
+				(C)<input type="radio" name="questao6" value="C">Empatar o jogo<br />
+				(D)<input type="radio" name="questao6" value="D">Não sobrar nenhuma peça no jogo<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">7. Complete: Qual a jogada de mate mais rápida possível? Check ___.</p>
+				<input type="text" name="questao7" id="questao7"/> <br />
+				 Dica(Uma palavra,6 letras)
+			</div>
+			<div class="questao">
+				<p class="pergunta">8. Quantas casas existe no tabuleiro de xadrez?</p>
+				<input type="text" name="questao8" id="questao8" />
+			</div>
+			<div class="questao">
+				<p class="pergunta">9. O jogo de xadrez estimula o(a):</p>
+				(A)<input type="radio" name="questao9" value="A">Coordenação Motora<br /> 
+				(B)<input type="radio" name="questao9" value="B">Raciocínio Lógico<br />
+				(C)<input type="radio" name="questao9" value="C">Atividades Musculares<br />
+				(D)<input type="radio" name="questao9" value="D">Exercícios Físicos<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">10. Como é chamado o movimento em que é executado a troca de posição do rei com umas das torres quando o movimento ainda é inédito para ambas as peças?</p>
+				<input type="text" name="questao10"  id="questao10" />
+			</div>	
+			<div style="text-align:center;">
+				<input type="button" name="valide" class="encerrar" value="Finalizar teste" onclick="confere();" > 
+			</div>
+		</div>
+	</form>
+	</body>
+</html>	

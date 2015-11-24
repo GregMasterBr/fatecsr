@@ -1,0 +1,28 @@
+
+/* - pastel.css - */
+@media screen {
+body,
+.breadcrumb, 
+#equipe,
+.jumbotron,
+.pagina,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    background: #ffffdd !important;
+    color: #000000 !important;
+}
+
+body {
+   /* font-size: 95% !important;*/
+}
+
+.breadcrumb  a {
+    text-decoration: underline;  
+    /*color: #000 !important;*/
+}
+
+}
+

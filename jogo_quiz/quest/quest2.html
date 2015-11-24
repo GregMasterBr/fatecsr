@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+			<meta charset="UTF-8"/>
+			
+			<link type="text/css" rel="stylesheet" href="../css/default.css" />
+			
+<script>
+
+// abre janela
+function abre(url,janela,larg,alt,scroll){
+	window.open(url,janela,"toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars="+scroll+",resizable=no,copyhistory=no,width="+larg+",height="+alt);
+}
+
+</script>		
+<script type="text/javascript">
+<!--
+function confere()
+{
+  aux='Resultado:                                \n\n';
+  //alert(document.resultado_questionario.questao9);
+  //alert(document.getElementById("questao10").value);
+  score = 0;
+  if(document.getElementById("questao1").value=="Rainha")
+  {
+	aux= aux + '   Questão 1: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 1: resposta errada. A Resposta correta é (Rainha). \n'
+  }
+  if(document.resultado_questionario.questao2.value=="D")
+  {
+	aux= aux + '   Questão 2: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 2: resposta errada. A Resposta correta é (D). \n'
+  }
+  if(document.resultado_questionario.questao3.value=="D")
+  {
+	aux= aux + '   Questão 3: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 3: resposta errada. A Resposta correta é (D). \n'
+  }
+  if(document.getElementById("questao4").value=="12")
+  {
+	aux= aux + '   Questão 4: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 4: resposta errada. A Resposta correta é (12). \n'
+  }
+  if(document.resultado_questionario.questao5.value=="A")
+  {
+	aux= aux + '   Questão 5: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 5: resposta errada. A Resposta correta é (A). \n'
+  }
+  if(document.resultado_questionario.questao6.value=="B")
+  {
+	aux= aux + '   Questão 6: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 6: resposta errada. A Resposta correta é (B). \n'
+  }
+  if(document.getElementById("questao7").value=="Kasparov")
+  {
+	aux= aux + '   Questão 7: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 7: resposta errada. A Resposta correta é (Kasparov). \n'
+  }
+   if(document.getElementById("questao8").value=="India")
+  {
+	aux= aux + '   Questão 8: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 8: resposta errada. A Resposta correta é (India). \n'
+  }
+  if(document.resultado_questionario.questao9.value=="B")
+  {
+	aux= aux + '   Questão 9: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 9: resposta errada. A Resposta correta é (B). \n'
+  }
+  //document.getElementByName("nivel").value;
+  if(document.getElementById("questao10").value=="Branca")
+  {
+	aux= aux + '   Questão 10: resposta correta. \n'
+    score = score + 1
+  }
+  else
+  {
+	aux= aux + '   Questão 10: resposta errada. A Resposta correta é (Branca). \n'
+  }  
+	  alert(aux + '\n\Você acertou ' + score + ' de 10 questões!' )
+    return true;
+}
+
+// -->
+</script>
+
+	
+	</head>
+	<body class="questionario quest2">
+	<form name="resultado_questionario"> 
+		<div class="">
+			<h2>Quizz Chess - Nível Intermediário</h2>
+			<hr />
+			<div class="questao">
+				<p class="pergunta">1. Qual é a Peça mais poderosa do Xadrez?</p>
+				<input type="text" name="questao1" id="questao1" />
+			</div>
+			<div class="questao">
+				<p class="pergunta">2. Quando um peão chega ao final do tabuleiro o que acontece?</p>
+				(A)<input type="radio" name="questao2" value="A">Falso.<br /> 
+				(B)<input type="radio" name="questao2" value="B">Verdadeiro <br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">3. Quanto vale a dama?</p>
+				(A)<input type="radio" name="questao3" value="A">1 torre e 1 bispo<br /> 
+				(B)<input type="radio" name="questao3" value="B">2 cavalos e 2 peões<br />
+				(C)<input type="radio" name="questao3" value="C">2 torres e 2 bispos<br />
+				(D)<input type="radio" name="questao3" value="D">3 cavalos e 1 peão<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">4. Com quantos anos Capablanca se tornou campeão nacional?</p>
+				<input type="text" name="questao4" id="questao4" />
+			</div>
+			<div class="questao">
+				<p class="pergunta">5. Em qual situação o roque menor não pode ser dado?</p>
+				(A)<input type="radio" name="questao5" value="A">O roque não pode ser dado quando alguma das casas entre o rei e a torre que será utilizada está sendo atacada por uma peça inimiga<br /> 
+				(B)<input type="radio" name="questao5" value="B">Rodada seguinte ao En passant.<br />
+				(C)<input type="radio" name="questao5" value="C">Com o CR em pregadura.<br />
+				(D)<input type="radio" name="questao5" value="D">Quando o bispo adversário está atacando a casa 1CR.<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">6. As letras vem antes do numeros na notacao?</p>
+				(A)<input type="radio" name="questao6" value="A">Capturar a Dama do adversário<br /> 
+				(B)<input type="radio" name="questao6" value="B">Deixar o Rei do adversário sem movimentos e em xeque<br />
+				(C)<input type="radio" name="questao6" value="C">Empatar o jogo<br />
+				(D)<input type="radio" name="questao6" value="D">Não sobrar nenhuma peça no jogo<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">7. Como é conhecido o famoso enxadrista que foi derrotado por Deep Blue?</p>
+				<input type="text" name="questao7" id="questao7"/> <br />				 
+			</div>
+			<div class="questao">
+				<p class="pergunta">8. Aonde surgiu o xadrez?</p>
+				<input type="text" name="questao8" id="questao8" />
+			</div>
+			<div class="questao">
+				<p class="pergunta">9. Quais casas representam o CENTRO do tabuleiro? </p>
+				(A)<input type="radio" name="questao9" value="A">a1,b1,c1,d1<br /> 
+				(B)<input type="radio" name="questao9" value="B">d4,d5,e4,e5<br />
+				(C)<input type="radio" name="questao9" value="C">d1,d2,d3,d4<br />
+				(D)<input type="radio" name="questao9" value="D">c4,c5,f4,f5<br />
+			</div>
+			<div class="questao">
+				<p class="pergunta">10. Qual é a cor da peça que inicia o jogo?</p>
+				<input type="text" name="questao10"  id="questao10" />
+			</div>	
+			<div style="text-align:center;">
+				<input type="button" name="valide" class="encerrar" value="Finalizar teste" onclick="confere();" > 
+			</div>
+		</div>
+	</form>
+	</body>
+</html>	

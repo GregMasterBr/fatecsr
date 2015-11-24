@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>:: Quizz Chess ::</title>
+		<meta name="description" content="Quiz Chess -  Perguntas sobre Xadrez.">
+		<meta name="keywords" content="Quizz, Xadrez,WEB,HTML 5,CSS 3,XML,JavaScript, Banco de Dados, Wordpress, SEO, Curso Web">
+		<meta name="author" content="GregMaster, www.gregamaster.com.br,Gregorio de Almeida Queiroz, Gregorio Queiroz, Gregorio Almeida">
+		<link href="favicon.ico" rel="icon" type="image/x-icon" />
+		<link href="js/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/cover.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/default.css" />
+		<script src="js/ie-emulation-modes-warning.js"></script>
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</head>
+	
+ 	<!--body onload="history.go(+1)"-->
+	<body>
+
+			<div class="site-wrapper pagina">
+
+			  <div class="site-wrapper-inner">
+
+				<div class="cover-container">
+
+				  <div class="masthead clearfix">
+					<div class="inner">
+					  <h3 class="masthead-brand"><a href="" class="marca_greg"><img src="img/coroa.png" class="thumb_img" alt="miniatura do rei">GregMaster</a></h3>
+					  <ul class="nav masthead-nav">
+						<li class="active"><a href="http://gregmaster.com.br/">Home</a></li>
+						<li><a href="#Contato" data-toggle="modal">Contato</a></li>						
+						<li><a href="Jogo_Quiz.rar" target="_blank">Download Quizz</a></li>		
+					  </ul>
+					</div>
+				  </div>
+
+				  <div class="inner cover">
+					<h1 class="cover-heading">Quizz Chess</h1>
+					<p class="lead">Teste seu conhecimento sobre o melhor jogo de tabuleiro para raciocínio lógico.<br /> Quero ver se você é um fera no quesito CHECK MATE!</p>
+					<p class="lead">
+					  <!--a href="quest/introducao.html" rel="shadowbox;width=250;height=300;" title="Prepare-se e Divirta-se!" class="btn btn-lg btn-default">Iniciar QUIZ</a-->
+					  <a href="#introducao" name="modal" class="btn btn-lg btn-default">Iniciar QUIZ</a>
+					</p>
+				  </div>
+
+				  <div class="mastfoot">
+					<div class="inner">
+					  <p>Visite o nosso site <a href="http://gregmaster.com.br/" target="_blank">GregMasterChess</a>, by <a href="http://gregmaster.com.br/paginas/quem_somos.php" target="_blank">GregMaster</a>.</p>
+					</div>
+				  </div>
+
+				</div>
+
+			  </div>
+
+			</div>	
+			
+			<div class="modal fade" id="Contato" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="exampleModalLabel">Compor Mensagem</h4>
+				  </div>
+				  <div class="modal-body">
+					<form>
+					  <div class="form-group">
+						<label for="recipient-name" class="control-label">Remetente</label>
+						<input type="text" class="form-control" id="recipient-name">
+					  </div>
+					  <div class="form-group">
+						<label for="message-text" class="control-label">Messagem</label>
+						<textarea class="form-control" id="message-text"></textarea>
+					  </div>
+					</form>
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary">Enviar</button>
+				  </div>
+				</div>
+			  </div>
+			</div>			
+			
+			
+				<div id="boxes">
+				  
+				<!-- Janela Modal com caixa de diálogo -->  
+				<div id="introducao" class="window">
+				  <div class="d-header">
+					<h3>Seja Bem Vindo!</h3>
+					<!--p>Estamos quase pronto para iniciar o QUIZZ, identifique-se e escolha o nível para o teste. É de arrepiar!</p-->
+				  </div>
+				  <!--a href="quest/quest1.html" rel="shadowbox;width=500;height=600;" title="Nível Fácil!" class="btn btn-lg btn-default close" target="_self">Fácil</a-->
+				  <div class="escolher_nivel">
+					<form name="info_nivel">
+					<label>Desafiante </label><input type="text" value="Capablanca" onclick="this.value=''"/> <br />
+					<label>Quizz</label>
+					
+					<select name="nivel" id="nivel" onchange="change_nivel(); return false;">
+						<option value="quest/quest1.html">Fácil</option>
+						<option value="quest/quest2.html">Intermediário</option>
+						<option value="quest/quest3.html" >Difícil</option>						
+					</select>
+					
+					</form>
+					<!--a href="javascript:change_nivel()" id="iniciar_quizz"rel="shadowbox;width=500;height=600;" title="Nível Fácil!" class="btn btn-lg btn-default close" target="_self">Teste<a-->
+					<!--a onclick="change_nivel()" id="iniciar_quizz2" rel="shadowbox;width=500;height=600;" title="Nível Fácil!" class="btn btn-lg btn-default close" target="_self">Teste<a-->
+					<!--a href="quest/quest2.html" onclick="change_nivel()" id="iniciar_quizz" rel="shadowbox;width=500;height=600;" title="Nível Fácil!" class="btn btn-lg btn-default close" target="_self">Fácil</a-->
+					<a href="quest/quest1.html" id="iniciar_quizz" rel="shadowbox;width=500;height=600;" title="Nível Fácil!" class="btn btn-lg btn-default close">Começar!</a>
+
+					<!--input type="password" value="Password" onclick="this.value=''"/-->    
+				  </div>
+				  <div class="d-footer">
+					
+				  </div>
+
+				</div>
+				<!-- Fim Janela Modal com caixa de diálogo -->  
+
+				<!-- Máscara para cobrir a tela -->
+				  <div id="mask"></div>
+
+				</div>
+		
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>		
+	<script type="text/javascript" src="js/modal_contato.js">//CONTATO</script>
+	<script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+		<script type="text/javascript">
+			//QUESTIONARIOS
+			/*shadowbox*/
+			 Shadowbox.init({
+			 language: 'pt',
+			 player: ['img', 'html', 'swf']
+			 });
+		</script>
+		
+		<script type="text/javascript" src="js/modal_introducao.js" >// Modal de introducao</script>
+		<script>
+		
+			function change_nivel(){
+				var NivelQuizz = document.getElementById("nivel").value; 
+				var title="";
+				var rel="shadowbox;width=500;height=600;";
+				var link_iniciar_quizz = document.getElementById("iniciar_quizz");  
+				//alert(NivelQuizz);
+				
+				if(NivelQuizz=="quest/quest1.html"){
+					title="Nível Fácil";
+				}else if(NivelQuizz=="quest/quest2.html"){
+					title="Nível Intermediário";
+				}
+				else{
+					title="Nivel Mestre";
+				}
+			
+		   
+		   	 //alert(document.all.iniciar_quizz.href);
+		   if (NivelQuizz == "") {
+				document.all.iniciar_quizz.href = "";
+				//alert(document.all.iniciar_quizz.href = "");
+			} else {
+				/*var mbm = document.createElement('a');
+				mbm.setAttribute('target','_self');
+				mbm.setAttribute('rel',rel);
+				mbm.setAttribute('href',NivelQuizz);
+				mbm.setAttribute('title',title);
+				mbm.click();*/
+				//link_iniciar_quizz.setAttribute('href',NivelQuizz);
+				//link_iniciar_quizz.setAttribute('title',title);
+				//alert(document.all.iniciar_quizz.href);
+				//alert(document.all.iniciar_quizz.title);
+				
+				//document.all.iniciar_quizz.href = NivelQuizz;
+				//document.all.iniciar_quizz.href = document.info_nivel.nivel.value;
+				//link_iniciar_quizz.load();
+				//link_iniciar_quizz.click();
+				/*Aqui precisa pensar o pq não executa a operação*/
+				$("#iniciar_quizz").attr({href : NivelQuizz}); //whereas var newpath is a string like "images/secondimage.jpg";
+				$("#iniciar_quizz").attr({title : title}); //whereas var newpath is a string like "images/secondimage.jpg";
+				Shadowbox.clearCache();
+				Shadowbox.setup();
+				
+			}
+			 //document.all.iniciar_quizz.load();  // if HTML source element is used
+			// alert(NivelQuizz);
+			 //alert(document.all.iniciar_quizz.href);
+
+			 //document.all.iniciar_quizz.load();
+             //document.all.iniciar_quizz.href();  // start play
+			
+			}
+			</script>
+
+
+
+		
+	</body>
+</html>

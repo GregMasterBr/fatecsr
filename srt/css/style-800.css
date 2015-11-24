@@ -1,0 +1,116 @@
+@charset UTF-8;
+/* 
+	Nome:Portal São Roque TEM -  Tablet
+	Data: 02 DEZ 2014
+	Descrição:  Estilo para o portal de São Roque
+	Versão: 0.1
+	Autores: Gegorio Queiroz, Thelma Kodama, Natalia, Vanita
+	Autor URI:http://gregmaster.com.br
+*/
+/*Css tablet*/
+/*FIX*/
+	header.content{
+		display:none;
+	}
+
+	
+	#teste{
+		display:block !important;
+		text-align:center;
+	}
+	
+	.marca2{
+		font-size:250%;	
+		padding-left:30px;
+		text-align:center;
+		
+	}
+	
+	#section-links li a p {
+		margin: 1px -2px 0 2px;
+		font-size: 0.650rem;
+	}
+	
+	/*.chamadas-anuncios .previsao-tempo .prev-pc{
+		display:none;
+	}
+	.chamadas-anuncios .previsao-tempo .prev-prev-cel{
+		display:block;
+	}*/
+	
+	.chamadas-anuncios .calendario img{
+		/*content:url(../img/calendario-eventos-sao-roque-w100.png);*/
+	}
+	.conteudo .sub-titulo{
+		font-size:1.2em;
+	}
+	.conteudo .quadro-principal{
+			width:100%;
+			height:auto;
+			/*background:blue;*/
+			float:left;
+			
+	}
+	.conteudo .chamadas-anuncios{
+			width:100%;
+			height:auto;
+			/*background:yellow;*/
+			float:left;
+	}
+		.chamadas-anuncios section{
+			margin-bottom:2px;
+			text-align:center;
+			/*background:blue;*/
+			float:left;
+			width:48%;
+			min-height:200px;			
+			margin-left:3px;
+			
+		}
+		.chamadas-anuncios section.noticias{
+			/*margin-top:220px;*/
+			
+		}
+		.chamadas-anuncios h2{
+			margin-bottom:2px;
+			padding-bottom:10px;
+		}
+		
+/*turismo*/		
+
+	.turismo  .controle-conteudo .bloco-turismo p{
+		padding:15px 10px 5px 10px;
+		text-indent:1.4em;
+		width:59%;
+	}	
+	.turismo  .controle-conteudo .bloco-turismo  .turismo-img {
+		width:41%;		
+	}
+		.turismo  .controle-conteudo .bloco-turismo .atracoes .lista-atracoes li{
+		font-size:1em;
+	}	
+	
+
+/*Servicos*/	
+		ul.lista-servicos .serv {
+			width:100%;
+			float:left;
+			padding:5px 20px 5px 0px;
+			/*height:115px;*/
+			height:auto;
+			margin-bottom:10px;
+		}
+				div.serv-info div {
+				display: table-cell;
+				vertical-align: middle;
+				padding-left:5px;
+				width: 100%;
+				height: auto;
+				/*background:gray;*/
+			}
+/*entretenimento*/	
+	.entretenimento .quadro-principal .secoes{
+		width:100%;
+		margin-right:0px;
+	}
+	

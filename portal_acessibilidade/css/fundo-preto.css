@@ -1,0 +1,30 @@
+
+/* - background2.css - */
+@media screen {
+body,
+.pagina,
+#equipe,
+.jumbotron,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    background: #000000 !important;
+    color: #FFFF00 !important;
+}
+
+body {
+   /* font-size: 95% !important;*/
+}
+
+.staff-designation{
+	color: #fff;
+}
+.breadcrumb  a {
+    text-decoration: underline;  
+    color: #000 !important;
+}
+
+}
+

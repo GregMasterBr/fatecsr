@@ -1,0 +1,132 @@
+@charset UTF-8;
+/* 
+	Nome:Portal São Roque TEM -  Tablet
+	Data: 02 DEZ 2014
+	Descrição:  Estilo para o portal de São Roque
+	Versão: 0.1
+	Autores: Gegorio Queiroz, Thelma Kodama, Natalia, Vanita
+	Autor URI:http://gregmaster.com.br
+*/
+/*Css celular*/
+/*FIX*/
+header.content{
+		display:none;
+	}
+
+	
+	#teste{
+		display:block !important;
+		text-align:center;
+	}
+	
+	.marca2{
+		font-size:175%;	
+		padding-left:30px;
+		text-align:center;
+		display:none;
+	}
+	
+	#section-links li a p {
+		margin: 1px -2px 0 2px;
+		font-size: 0.450rem;
+	}
+	
+	.conteudo .sub-titulo{
+		font-size:1em;
+	}
+	.conteudo .quadro-principal{
+			width:100%;
+			height:auto;
+			/*background:blue;*/
+			float:left;
+			
+	}
+	
+	.chamadas-anuncios .previsao-tempo .prev-pc{
+			display:none;
+	}
+	.chamadas-anuncios .previsao-tempo .prev-cel{
+			display:block;
+	}
+	.chamadas-anuncios .calendario img{
+		content:url(../img/calendario-eventos-sao-roque-w100.png);
+	}
+	.conteudo .chamadas-anuncios{
+			width:100%;
+			height:auto;
+			/*background:yellow;*/
+			float:left;
+	}
+	.chamadas-anuncios section{
+			margin-bottom:2px;
+			text-align:center;
+			/*background:blue;*/
+			float:left;
+			width:100%;
+			height:auto;
+			margin-left:3px;
+			
+	}
+	.chamadas-anuncios section.noticias{
+			/*margin-top:220px;*/
+			
+	}
+	/*.chamadas-anuncios section.noticias .noticiag1{
+		width:490px;
+		height:150px;
+	}*/
+	
+	.chamadas-anuncios h2{
+			margin-bottom:2px;
+			padding-bottom:10px;
+		}
+	
+	.conteudo .topo-conteudo .q2{
+				width:100%;
+				text-align:center;
+				/*background:blue;*/
+		  }	
+	.conteudo .topo-conteudo .q3{
+		display:none;
+	}
+	.conteudo .topo-conteudo .q1 .logo-conteudo{display:none;}
+	.quadro-principal .quadro-img img{
+		width:360px !important;
+	}
+		
+/*Turismo*/		
+	.turismo  .controle-conteudo .bloco-turismo p{
+		padding:15px 10px 5px 10px;
+		text-indent:1.2em;
+		width:99%;
+	}	
+	.turismo  .controle-conteudo .bloco-turismo  .turismo-img {
+		width:99%;		
+	}
+		.turismo  .controle-conteudo .bloco-turismo .atracoes .lista-atracoes li{
+		font-size:1em;
+	}	
+
+/*Servicos*/	
+		ul.lista-servicos .serv {
+			width:100%;
+			float:left;
+			padding:5px 20px 5px 0px;
+			/*height:115px;*/
+			height:auto;
+			margin-bottom:10px;
+		}
+				div.serv-info {
+				display: none;
+			}	
+	
+/*entretenimento*/	
+	.entretenimento .quadro-principal .secoes{
+		width:100%;
+		margin-right:0px;
+	}
+			
+	/*menu-rodape*/
+	#menu-rodape ul {
+		font:60% Tahoma;
+	}

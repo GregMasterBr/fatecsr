@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+		<style>
+		a{
+			text-decoration:none;
+			
+		}
+		ul.ex{
+			list-style:none;
+			
+		}
+		ul.ex li{
+			font-size:1.3em;
+			line-height:3.2em;
+		}
+		
+		</style>
+	</head>
+	<br />
+<div style="margin-left:10px">	
+<h2>.htaccess</h2>
+<p>
+O htaccess é um arquivo de configuração de acesso do
+ servidor Apache. Com ele é possível configurar várias funções de acesso dos usuários a um diretório específico
+ e atrbuir estas regras aos subdiretórios subsequentes. Sendo a utilização de alguns parâmetros de configuração 
+ fortemente recomendado para otimização de sites.
+</p><br />
+<h3> Exemplo</h3>
+<p>
+<Files ~ “^.(htaccess|htpasswd)$”><br />
+deny from all<br />
+</Files><br />
+// ——- Autenticação com senha ativado ———–//<br />
+AuthUserFile /site/.htpasswd<br />
+AuthGroupFile /dev/null<br />
+AuthName “Please enter your ID and password”<br />
+AuthType Basic<br />
+require valid-user<br /><br />
+//——- páginas de erro padrão ———–//<br />
+ErrorDocument 400 erro400.html<br />
+ErrorDocument 401 erro401.html<br />
+…                 xxx erroXXX.html<br />
+ErrorDocument 504 erro504.html<br />
+ErrorDocument 505 erro505.html<br />
+RewriteEngine on<br /><br />
+//———– Evitando Conteúdo duplicado ———–//<br />
+RewriteCond %{HTTP_HOST} ^(mundoseo.com.br)(:80)? [NC]<br />
+RewriteRule ^(.*) http://www.mundoseo.com.br/$1 [R=301,L]<br /><br />
+//———– Página Padrão ———–//<br />
+DirectoryIndex páginadefault.html<br /><br />
+//———– Redirecionamento Permanente ———–//<br />
+Redirect permanent www.movapermanentedaqui.com www.movidopermanenteparaca.com<br />
+//———– Redirecionamento Temporário ———–//<br />
+Redirect temp www.movatemporariodaqui.com www.movidoparacatemporario.com<br />
+order deny,allow<br /><br />
+//——— Páginas permitidas ————-//<br />
+allow from www.endereçopermitido.com.br<br />
+//——— Páginas Bloqueadas ————-//<br />
+</p>
+</div>

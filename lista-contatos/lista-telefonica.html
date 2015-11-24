@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lista Tefônica</title>
+
+    <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="css/bootstrap-table.css">
+     <link rel="stylesheet" href="css/examples.css">
+      
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style> 
+	 .operacoes{margin-top:20px; text-align:right;}	
+	</style>
+	
+  </head>
+  
+  <body>
+      <div class="container-fluid">
+          <h1 class="text-center text-capitalize ">minha lista Telefônica!</h1>
+            <!--
+            <label for="BuscaTermo" >Busca Termo</label><br />
+            <input type="text" class="form-control" placeholder="Procurar Termos na Minha Lista de Contatos"><br />
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="BuscaTermo" class="sr-only">Busca Termo</label>
+                <input type="text" class="form-control" id="BuscaTermo" placeholder="Procurar Termos na Minha Lista de Contatos">
+              </div>
+              <button type="submit" class="btn btn-default">Procurar Termo</button>
+            </form>
+			-->
+
+            <div class="table-responsive">
+                  <table class="table table-hover table-bordered"
+						    id="table"
+						   data-height="300"
+						   data-toggle="table"
+						   data-url="json\contatos.json"
+					       data-sort-name="telefone"
+						   data-sort-order="desc"
+			               data-pagination="true"
+						   data-page-size="5"
+						   data-page-list="[5,8,10]"
+						   data-pagination-first-text="|<"
+						   data-pagination-pre-text="<"
+						   data-pagination-next-text=">"
+						   data-pagination-last-text=">|"
+						   data-search="true"
+						   data-show-refresh="true"
+						   data-show-toggle="true"
+						   data-show-columns="true"
+					       data-show-export="true"
+						   data-show-footer="true">
+            <thead>
+            <tr>
+				<th data-field="state" data-checkbox="true"></th>
+                <th data-field="nome" data-sortable="true">Nome</th>
+                <th data-field="telefone" data-sortable="true">Telefone</th>
+                <th data-field="observacao" data-sortable="true" >Observação</th>
+            </tr>
+            </thead>
+        </table>
+             </div>
+           <div class="col-md-12 operacoes">
+				 <button type="button" class="btn btn-primary">Novo Contato</button>	
+				  <button type="button" id="button" class="btn btn-warning">Remover Contato</button>	
+		   </div>
+      </div>
+      BASE DE INFORMAÇÃO EM <abbr title="JavaScript Object Notation - Notação de Objetos JavaScript" class="initialism">JSON</abbr>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/ga.js"></script>
+<script>
+    var $table = $('#table'),
+        $button = $('#button');
+
+    $(function () {
+        $button.click(function () {
+            var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+                return row.nome;
+            });
+            $table.bootstrapTable('remove', {
+                field: 'nome',
+                values: ids
+            });
+        });
+    });
+</script>
+  </body>
+</html>
