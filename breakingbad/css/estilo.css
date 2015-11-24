@@ -1,0 +1,342 @@
+@charset:"UTF-8";
+/*Este será o estilo carregado por padrão*/
+*{
+	margin:0px;
+	padding:0px;
+}
+
+img {
+	border: none;
+}
+html,body {
+	background: #1ba11a url("../img/fundo.png") top left repeat;
+	font-family: Comic Sans,Comic Sans MS,cursive;
+    font-size: 1em;
+}
+
+.pagina{
+  max-width:960px;
+ /* height:660px;
+  background:purple;*/
+  margin:0px auto 0px auto;
+}
+
+.cabecalho h1 {
+	color: #FFF;
+	font-family: times,helvetic,sans-serif;
+	margin: 0;
+    text-align: center;
+    font-size: 112px;
+	padding-top: 12px; /*tirar depois*/
+	text-shadow: 0 5px 5px #000;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.walterwhite:hover{
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+	-webkit-animation-duration: 1s;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-timing-function: linear;
+}
+
+.cabecalho  h3 {
+	font-size: 40px; /*Provisorio o tamnho estao nos outros css*/ 
+	font-weight: normal;
+	margin: 0;
+    color:yellow;
+    text-align: center;
+	text-shadow: 0 2px 2px darkgreen;
+}
+
+.img_principal{
+    text-align:center;
+}
+.conteudo .img_principal img{
+	/*background:#000 url("../img/img_familia_1.jpg")no-repeat ;*/
+	content:url("../img/img_principal.jpg");/*irei trocar os contents das urls das imgs*/
+}
+.secao_galeria,.secao_galeria2{
+	/*background:black;*/
+	text-align:center;
+	width:965px;
+	margin:0 auto;
+}
+.secao_galeria ul {
+	margin: 42px 0;
+	list-style-type: none;
+}
+.secao_galeria .galeria li {
+	margin: 0px 18px;
+	display: inline;
+}
+.secao_galeria .galeria li img {
+	vertical-align: top;
+}
+.conteudo p {
+	font-weight: bold;
+	margin: 1em 50px;
+	line-height: 1.2em;
+	text-align: left;
+}
+
+
+.paragrafo1{	
+	font-size: 25px;
+	width:865px;
+	/*height:390px;*/
+	margin:0 auto;
+	/*background:purple;*/
+}
+
+.secao_galeria2 ul {
+	margin: 42px 0;
+	list-style-type: none;
+}
+.secao_galeria2 .galeria li {
+	margin: 40px 95px;
+	display: inline;
+}
+.secao_galeria2 .galeria li img {
+	vertical-align: top;
+}
+.paragrafo2{	
+	width:865px;
+	/*height:390px;*/
+	margin:0 auto;
+	/*background:purple;*/
+}
+/*Filtros nas imagens */
+
+.filtro:hover{ /*Drop-shadow*/
+    -webkit-filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+    filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, .7));
+
+}
+/*Botão de doação*/
+.botao_doacao{
+	cursor:pointer;
+	transition:all 100ms linear; z-index:999;"
+}
+
+
+.faixa,.faixa2,.faixa3,.faixa4,.faixa5{
+	width:900px;
+	height:150px;	
+	margin:0 auto;
+	text-align:center;
+	}
+.faixa .texto_faixa{
+	text-align: center;
+}
+.img_faixa{
+	position:relative;
+	top:50px;
+}
+.img_faixa.esq{
+	left:-30px;
+}
+.img_faixa.dir{
+	right:-30px;
+}
+.faixa2 p,.faixa3 p{
+	text-align:center;
+}
+.faixa4{
+	margin-top:40px;
+}
+/*.faixa4 .img_banner{
+	content:url("../img/save_walter_banner_faixa.png");/*irei trocar os contents das urls das imgs
+}*/
+.faixa4 {
+	background:#F7801C;
+	-moz-box-shadow:#000 1px 1px 1px;
+	-webkit-box-shadow:#000 1px 1px 1px;
+	box-shadow: #000 1px 1px 1px;
+	text-align:center;
+}
+
+.faixa4 .saveww{
+	color:#FEEC08;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	text-shadow: 0 5px 5px #000;
+	font-size: 3.7em;
+	font-weight:bold;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+.faixa4 .underline{
+	width: 550px;
+	/*position:relative;
+	left:20%;
+	top:-40%;*/
+	margin-left:20%;
+	margin-bottom:20px;
+	height: 10px; 	
+	text-shadow: 15px 15px 15px #000;
+	box-shadow: #000 2px 2px 2px;
+	border-radius:2px;
+	background:#FEEC08;
+}
+
+.faixa4 .texto_abaixo{
+	color:#000;
+
+	
+}
+.faixa5{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.faixa5 .botao_doacao{
+	content:url("../img/botao_doacao.png");/*irei trocar os contents das urls das imgs*/
+}
+.faixa5 .btn{
+	width:325px;
+	height:152px;
+	background:#B41914;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 15px solid #600906;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	
+	font-weight: normal;
+	box-sizing: border-box;
+	font: -webkit-small-control;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	}
+	
+.faixa5 .btn:hover, .faixa5 .btn:focus {
+text-decoration: none;
+background-position: 0 -15px;
+-webkit-transition: background-position 0.1s linear;
+-moz-transition: background-position 0.1s linear;
+-o-transition: background-position 0.1s linear;
+transition: background-position 0.1s linear;
+}
+.faixa5 .btn:hover{
+	/*background:#B41914;*/
+}
+.faixa6{
+	background: #000;
+	width: 840px;
+	height: 185px;
+	margin: 0 auto;
+	padding: 8px;
+	margin-bottom:30px;
+	
+}
+.faixa6 p{
+	text-align:center;
+}
+.menu{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.menu a + a {
+margin-left: 40px;
+}
+.menu a {
+color: #fff;
+text-decoration: underline;
+}
+.white {	color: #FFF;}
+.yellow {color: #fff54f;}
+.dark-yellow {color: #ffe107;}
+.green{color:darkgreen;}
+.small-copy {font-size: 21px;}
+.medium-copy {font-size: 25px;}
+.large-copy {font-size: 42px;}
+
+
+
+
+/*.secao{
+  /*background:red;*/
+  /*width:33.3%;
+  height:40px;
+float:left;
+}*/
+.rodape{
+	 height:30px; 
+	 width:100%;
+	 /*background:gray;*/	
+	 float:left;
+	 bottom:0px;
+	text-align:center; 
+}
+.rodape a{
+	text-decoration:none;
+}
+.rodape small{
+	text-align:center;
+	font-size: 12px;	
+	height:30px;
+}
+.logo_greg{
+	/*background: url("../img/gregmaster_mini.png")no-repeat;*/
+	width:30px;
+	border:0px;
+	height:30px;
+	margin-top:-5px;
+	vertical-align:top;
+	
+}
+
+.ajuda_traducao{
+	position:fixed;
+	top:0px;
+	right:2px;
+	text-align:center;
+	font-size:0.6em;
+	font-weight:bold;
+	text-shadow: 0 5px 5px #fff;
+	color:darkgreen;
+	/*color:#B41914;
+	color:#F7801C;*/
+	
+}

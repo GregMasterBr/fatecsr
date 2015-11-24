@@ -1,0 +1,35 @@
+@charset:"UTF-8";
+
+*{
+margin:0px;
+padding:0px;
+}
+body{
+  background:#fff;
+}
+.logo{height:50px;width:50px;background:red;right:18px}
+.pagina{
+  max-width:600px;
+  height:400px;
+  background:orange;
+}
+.cabecalho{
+ height:100px; 
+ background:green;
+}
+.conteudo{
+  background:blue;
+  height:250px;
+}
+.secao{
+  background:red;
+  width:33.3%;
+  height:30px;
+ float:left;
+}
+.rodape{
+ height:20px; 
+ width:100%;
+ background:black;
+ float:left;
+}
