@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="Gregorio, Thelma, Vanita, Jhon, Gustavo">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png" />
 
     <title>Easy Employee</title>
 
@@ -24,7 +24,12 @@
 
   <body>
 
-<?php    
+<?php   
+    if(!$_SESSION["usuario"]){
+      header('Location:'.$_SESSION["path"]."login.php");
+      exit;
+    } 
+
     include ('includes/conexao.php');
     include("includes/menu.php");
     mysqli_select_db($ligax, 'projeto');

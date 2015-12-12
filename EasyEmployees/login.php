@@ -1,6 +1,8 @@
 <?php
 // Start the session
 session_start();
+$_SESSION["path"]=str_replace("login.php","",$_SERVER['PHP_SELF']);
+
 ?>
 <!DOCTYPE html>
 <html lang="PT-Br">
@@ -11,7 +13,7 @@ session_start();
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="Gregorio, Thelma, Vanita, Jhon, Gustavo">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png" />
 
     <title>Login Easy Employee</title>
 
@@ -62,17 +64,17 @@ session_start();
 
             $usuario = isset($_POST["usuario"])?$_POST["usuario"]:"";
             $senha = isset($_POST["senha"])?$_POST["senha"]:"";
-            $where="WHERE nome= '".$usuario."' and senha='".$senha."'";
+            $where="WHERE usuario= '".$usuario."' and senha='".$senha."'";
 
         mysqli_select_db($ligax, 'projeto');
             
         $consulta = "Select * from login ".$where;
-       // echo $consulta;
+        //echo $consulta;
         $result = mysqli_query($ligax, $consulta);
         $nregistros = mysqli_num_rows($result);
-        //echo $result;
+        echo $result;
         if(strlen($usuario)>3){
-            //echo $consulta." ".$nregistros;
+           // echo $consulta." sadadadadad ".$nregistros;
             if( $nregistros==1){
                 $_SESSION["usuario"] =$usuario;
                 //echo $_SESSION["usuario"];
