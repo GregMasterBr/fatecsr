@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 $_SESSION["path"]=str_replace("login.php","",$_SERVER['PHP_SELF']);
-
+$_SESSION["usuario"]="";
 ?>
 <!DOCTYPE html>
 <html lang="PT-Br">
@@ -61,7 +61,7 @@ $_SESSION["path"]=str_replace("login.php","",$_SERVER['PHP_SELF']);
   </body>
     <?php 
         include ('includes/conexao.php');
-
+          //  echo $_SESSION["path"];
             $usuario = isset($_POST["usuario"])?$_POST["usuario"]:"";
             $senha = isset($_POST["senha"])?$_POST["senha"]:"";
             $where="WHERE usuario= '".$usuario."' and senha='".$senha."'";
@@ -69,12 +69,12 @@ $_SESSION["path"]=str_replace("login.php","",$_SERVER['PHP_SELF']);
         mysqli_select_db($ligax, 'projeto');
             
         $consulta = "Select * from login ".$where;
-        //echo $consulta;
+        echo $consulta;
         $result = mysqli_query($ligax, $consulta);
         $nregistros = mysqli_num_rows($result);
-        echo $result;
+        echo $nregistros+ "nregistros";
         if(strlen($usuario)>3){
-           // echo $consulta." sadadadadad ".$nregistros;
+            //echo $consulta." ".$nregistros;
             if( $nregistros==1){
                 $_SESSION["usuario"] =$usuario;
                 //echo $_SESSION["usuario"];

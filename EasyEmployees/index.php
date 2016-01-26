@@ -24,14 +24,14 @@
 
   <body>
 
-<?php   
+<?php    
+
+    include ('includes/conexao.php');
+    include("includes/menu.php");
     if(!$_SESSION["usuario"]){
       header('Location:'.$_SESSION["path"]."login.php");
       exit;
     } 
-
-    include ('includes/conexao.php');
-    include("includes/menu.php");
     mysqli_select_db($ligax, 'projeto');
     $consulta = "Select * from funcionarios";
     $result = mysqli_query($ligax, $consulta);
