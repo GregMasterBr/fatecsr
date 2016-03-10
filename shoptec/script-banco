@@ -1,0 +1,84 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Generation Time: Mar 10, 2016 at 10:11 PM
+-- Server version: 5.5.38
+-- PHP Version: 5.6.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `fatec`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galery`
+--
+
+CREATE TABLE `galery` (
+  `id` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `product` int(11) NOT NULL,
+  `path` varchar(250) NOT NULL,
+  `tags` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `galery`
+--
+
+INSERT INTO `galery` (`id`, `product`, `path`, `tags`) VALUES
+('2016-03-10 20:37:51', 1, 'smart-tv-gamer-led-4k-ultra-hd-65-samsungun65ju6700-4-hdmi-3-usb-wi-fi-193367800.jpg', 'smart, tv, gamer, led'),
+('2016-03-10 20:37:51', 2, 'Samsung_Galaxy_J3_Android_smartphone_with_4G_LTE.jpg', 'samsung, galaxy j3, android 5.5');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+`id` int(11) NOT NULL,
+  `product` varchar(500) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `price` float NOT NULL,
+  `discount` float NOT NULL,
+  `reviews` int(11) NOT NULL,
+  `like_product` int(11) NOT NULL,
+  `favorite` tinyint(1) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product`, `description`, `price`, `discount`, `reviews`, `like_product`, `favorite`, `createdAt`) VALUES
+(1, 'Smart TV LED 65 Samsung Ultra HD 4K ', 'Smart TV LED 65 Samsung Ultra HD 4K UN65JU6500GXZD 4HDMI 3 USB 240 Hz + Soundbar Samsung HW-H370 120W 2.1 Canais Bluetooth ', 9.408, 8.018, 5, 2, 0, '2016-03-10 18:05:24'),
+(2, 'Smartphone Samsung Galaxy J3', 'Smartphone Samsung Galaxy J3 Dual Chip Desbloqueado Android 5.1 Tela 5'''' 8GB 4G Wi-Fi Câmera 8MP - Branco', 999, 899, 10, 3, 0, '2016-03-10 18:05:24'),
+(3, 'Tablet Samsung Galaxy Tab S2', 'Tablet Samsung Galaxy Tab S2 T815 32GB Wi-fi 4G Tela AMOLED 9.7'''' Android 5.0 Processador Octa Core 1.9 Ghz+1.3GHz - Preto', 2.099, 1.988, 20, 5, 0, '2016-03-10 18:07:35'),
+(4, 'Ar Condicionado ', 'Ar Condicionado Split Samsung 12.000 Btus, Frio - 220V', 1599, 1599, 3, 2, 0, '2016-03-10 18:07:35');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
