@@ -83,7 +83,7 @@
                 let observacaoContato = document.querySelector('#observacaoContato');
 
                 if (nomeContato.value.length > 2 && telefoneContato.value.length > 10) {
-                    contatoListObject.push({ "nome": nomeContato.value, "telefone": telefoneContato.value, "observacao": observacaoContato.value });
+                    contatoListObject.push({"id": Date.now(), "nome": nomeContato.value, "telefone": telefoneContato.value, "observacao": observacaoContato.value });
                     $('#addContato').modal('hide');
                     nomeContato.value = "";
                     telefoneContato.value = "";
@@ -109,24 +109,33 @@
                 const confirmacaoExclusaoModal = document.getElementById('removerContato');
                 const modalTitle = confirmacaoExclusaoModal.querySelector('.modal-title');
                 const modalBody = confirmacaoExclusaoModal.querySelector('.modal-body');
+                let contato_ = null;
 
                 var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+                    console.log(row)
+                    contato_ = row;
                     return row.nome;
                 });
 
                 for (var i = 0; i < contatoListObject.length; i++) {
+                    console.log('IDS', ids);
                     contato = contatoListObject[i];
-                    if (contato.nome == ids) {
+                    //console.log(contato.nome, ids, contato.nome == ids,contato.nome === ids, contato_);
+                    if (contato.id == contato_.id) {
                         index = i;
                         break;
                     }
                 }
                 if (index > -1) {
                     modalTitle.textContent = `Você deseja realmente excluir o contato: ${contato.nome}?`;
+                    let data_criacao = new Date(contato.id);
+
                     var body = `
                             <h4>NOME: ${contato.nome}</h4>
                             <h5>${contato.telefone}</h5>
                             <p>Observação: ${contato.observacao}</p>
+                            <p>Criado em: ${data_criacao}</p>
+                            <h6>ID: ${contato.id}</h6>
                             `
                     modalBody.innerHTML = body;
                     
