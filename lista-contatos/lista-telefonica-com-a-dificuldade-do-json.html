@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista Telefônica</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/examples.css">
+    <style>
+        .operacoes {
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+    <script>
+        //ALTERNATIVA PARA CARREGAR O JSON e SALVAR
+        let meusContatosJson= null;
+
+
+        function saveJsonObjToFile(saveObj) {
+            //const saveObj = { "a": 3 }; // tmp
+            // file setting
+            const text = JSON.stringify(saveObj);
+            const name = "contatos.json";
+            const type = "text/plain";
+
+            // create file
+            const a = document.createElement("a");
+            const file = new Blob([text], { type: type });
+            a.href = URL.createObjectURL(file);
+            a.download = name;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+    }
+
+    </script>
+    <script type="module">
+        import dataJson from "./json/contatos.json" assert { type: "json" };     
+        meusContatosJson = dataJson;    
+    </script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-capitalize ">minha lista Telefônica!</h1>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered" id="table" data-height="100%" data-toggle="table"
+                data-url="json\contatos.json" data-sort-name="telefone" data-sort-order="desc" data-pagination="true"
+                data-page-size="5" data-page-list="[5,10, 25, 50, all]" data-pagination-first-text="|<"
+                data-pagination-pre-text="<" data-pagination-next-text=">" data-pagination-last-text=">|"
+                data-search="true" data-show-export="true" data-show-fullscreen="true" data-show-refresh="true"
+                data-show-toggle="true" data-show-columns="true" data-show-export="true" data-show-footer="true">
+                <thead>
+                    <tr>
+                        <th data-field="state" data-checkbox="true"></th>
+                        <th data-field="nome" data-sortable="true">Nome</th>
+                        <th data-field="telefone" data-sortable="true">Telefone</th>
+                        <th data-field="observacao" data-sortable="true">Observação</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="col-md-12 operacoes">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addContato">Novo
+                Contato</button>
+            <button type="button" id="button" class="btn btn-warning">Remover Contato</button>
+        </div>
+    </div>
+    <br>
+    <h5> BASE DE INFORMAÇÃO EM <abbr title="JavaScript Object Notation - Notação de Objetos JavaScript"
+            class="initialism">JSON</abbr></h5>
+
+    <p>É complicado via JS puro manipular ler e escrever em arquivos JSONs. <br>
+         A alternativa é salvar o conteúdo no localstorge. Criar uma função que permite importar os contatos e salvar no localstorage e uma função para exportar o conteúdo.</p>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+    <script
+        src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/export/bootstrap-table-export.min.js"></script>
+
+    <script>
+        var $table = $('#table'),
+            $button_remover_contato = $('#button');
+        $(function () {
+            $button_remover_contato.click(function () {
+                var ids = $.map($table.bootstrapTable('getSelections'), function (row) {
+                    return row.nome;
+                });
+                $table.bootstrapTable('remove', {
+                    field: 'nome',
+                    values: ids
+                });
+            });
+        });
+    </script>
+    <script>
+    
+        let listaContatosJson = null;
+        // const response = await fetch('https://github.com/GregMasterBr/fatecsr/blob/master/lista-contatos/json/contatos.json');
+
+        // const json = await response.json();
+
+        // console.log(JSON.stringify(json));        
+
+        async function carregarListaContatos() {
+            return await fetch("./json/contatos.json")
+                .then((res) => {
+                    return res.json();
+                })
+                .then(data => {
+                    listaContatosJson = data;
+                    //console.log("DATA", data);
+                    //return data;
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+
+        window.addEventListener("load", (event) => {            
+            console.log("meusContatosJson", meusContatosJson);
+            const button_add_contato = document.querySelector('#btnAddContato');
+            button_add_contato.addEventListener('click', (e) => {
+                carregarListaContatos();
+                let nomeContato = document.querySelector('#nomeContato');
+                let telefoneContato = document.querySelector('#telefoneContato');
+                let observacaoContato = document.querySelector('#observacaoContato');                
+
+                if(listaContatosJson && nomeContato.value.length > 2 && telefoneContato.value.length  > 10){
+                    listaContatosJson.push({"nome" : nomeContato.value, "telefone":telefoneContato.value, "observacao": observacaoContato.value });
+                    console.log("listaContatosJson", listaContatosJson);
+                    $('#addContato').modal('hide');
+                    nomeContato.value="";
+                    telefoneContato.value="";
+                    observacaoContato.value="";
+                    meusContatosJson = listaContatosJson;
+                    //saveJsonObjToFile(listaContatosJson);
+                }else{
+                     e.preventDefault();
+                     if (nomeContato.value.length < 3 ){
+                        nomeContato.focus();
+                     }else{
+                        telefoneContato.focus();
+                     }                     
+                }
+                //JSON.stringify();
+            });
+        });
+
+
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addContato" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="addContatoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="addContatoLabel">Adicionar novo contato</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="myForm" onsubmit="return false;">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nomeContato" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeContato" aria-describedby="nomeContatoHelp"
+                                minlength="3" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefoneContato" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefoneContato" name="telefoneContato"
+                                pattern="[0-9]{11}" aria-describedby="telefoneContatoHelp" minlength="11" required>
+                            <div id="telefoneContatoHelp" class="form-text">Formato: 15987654321</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="observacaoContato" class="form-label">Observação</label>
+                            <textarea class="form-control" id="observacaoContato" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="btnAddContato">Adicionar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
